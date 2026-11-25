@@ -12,14 +12,16 @@ header{background:var(--white);padding:1rem 2rem;display:flex;justify-content:sp
 .logo{font-weight:700;color:var(--primary)}
 nav a{margin-left:1.5rem;text-decoration:none;color:var(--text);font-weight:500}
 nav a:hover{color:var(--primary)}
-.hero{padding:4rem 2rem;text-align:center;background:linear-gradient(rgba(46,125,50,.9),rgba(46,125,50,.7)),url('https://via.placeholder.com/1200x600?text=Питомник+Камышин') no-repeat center/cover;color:#fff}
-.hero h1{margin:0 0 .5rem;font-size:2.2rem}
+.hero{padding:6rem 2rem;text-align:center;color:#fff;background:linear-gradient(rgba(46,125,50,.85),rgba(46,125,50,.7)),url('forest1.jpg') no-repeat center center;background-size:cover}
+.hero h1{margin:0 0 .5rem;font-size:2.2rem;text-shadow:0 1px 6px rgba(0,0,0,.4)}
 .btn{display:inline-block;margin-top:1rem;padding:.8rem 1.6rem;background:var(--dark);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;border:none;cursor:pointer}
 .container{max-width:1100px;margin:3rem auto;padding:0 1.5rem}
 h2{color:var(--primary);margin-bottom:1.2rem;border-bottom:2px solid #e0e0e0;padding-bottom:.4rem}
 .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
 .card{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
 .card h3{margin-top:0;color:var(--dark)}
+.forest-banner{height:380px;background:linear-gradient(rgba(27,94,32,.35),rgba(27,94,32,.35)),url('forest3.jpg') no-repeat center center;background-size:cover;display:flex;align-items:center;justify-content:center}
+.forest-banner h2{color:#fff;border-bottom:none;margin:0;padding:0 1.5rem;text-align:center;font-size:1.6rem;text-shadow:0 1px 6px rgba(0,0,0,.55)}
 .cat{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06);margin-bottom:2rem}
 .cat h3{margin-top:0;color:var(--dark)}
 .count{color:#888;font-weight:400;font-size:.9em}
@@ -27,15 +29,17 @@ table{width:100%;border-collapse:collapse;background:var(--white)}
 th,td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid #eee}
 th{background:#fafafa;color:var(--primary);font-weight:600}
 .price{white-space:nowrap;font-weight:600;color:var(--dark)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+#contacts{margin-top:3rem;padding:3rem 1.5rem;background:linear-gradient(rgba(245,247,250,.85),rgba(245,247,250,.93)),url('forest2.jpg') no-repeat center center;background-size:cover}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
 .contact-box{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
 .contact-box h3{margin-top:0;color:var(--dark)}
 a{color:var(--primary)}
 .note{color:#666;margin-top:1.2rem}
+#contacts .btn-wrap{text-align:center;margin-top:1.5rem}
 form{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.06);max-width:560px}
 form input,form textarea{width:100%;padding:.7rem;margin:.4rem 0 1rem;border:1px solid #ddd;border-radius:6px;font:inherit}
 footer{background:#1a1a1a;color:#ccc;padding:2rem;text-align:center;font-size:.9rem}
-@media(max-width:640px){header{flex-direction:column;gap:.75rem}nav a{margin:.3rem 0;display:block}.hero h1{font-size:1.8rem}}
+@media(max-width:640px){header{flex-direction:column;gap:.75rem}nav a{margin:.3rem 0;display:block}.hero h1{font-size:1.8rem}.forest-banner{height:260px}.forest-banner h2{font-size:1.2rem}}
 </style>
 </head>
 <body>
@@ -66,9 +70,17 @@ footer{background:#1a1a1a;color:#ccc;padding:2rem;text-align:center;font-size:.9
   </div>
 </section>
 
+</div>
+
+<section class="forest-banner">
+  <h2>Более 90 видов и форм деревьев и кустарников — районировано для Нижнего Поволжья</h2>
+</section>
+
+<div class="container">
+
 <section id="catalog">
   <h2>Каталог и цены (прайс — осень 2026)</h2>
-  
+
       <div class="cat">
         <h3>Деревья хвойные <span class="count">(30)</span></h3>
         <table>
@@ -335,6 +347,8 @@ footer{background:#1a1a1a;color:#ccc;padding:2rem;text-align:center;font-size:.9
   <p class="note">Цены при крупных партиях — уточняйте по телефону. Актуальность наличия подтверждаем по звонку.</p>
 </section>
 
+</div>
+
 <section id="contacts">
   <h2>Контакты</h2>
   <div class="contact-grid">
@@ -343,10 +357,8 @@ footer{background:#1a1a1a;color:#ccc;padding:2rem;text-align:center;font-size:.9
     <div class="contact-box"><h3>Email</h3><p><a href="mailto:pitomnik-vnialmi@mail.ru">pitomnik-vnialmi@mail.ru</a></p></div>
     <div class="contact-box"><h3>График работы</h3><p>Пн–Чт: 8:00–17:00<br>Пт: 8:00–16:00<br>Сб–Вс: выходной<br>Перерыв: 12:00–13:00</p></div>
   </div>
-  <p><a class="btn" href="https://yandex.ru/maps/?text=%D0%9A%D0%B0%D0%BC%D1%8B%D1%88%D0%B8%D0%BD%2C%20%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BE%D0%BA%20%D0%92%D0%9D%D0%98%D0%90%D0%9B%D0%9C%D0%98%2C%201" target="_blank">Открыть на карте</a></p>
+  <p class="btn-wrap"><a class="btn" href="https://yandex.ru/maps/?text=%D0%9A%D0%B0%D0%BC%D1%8B%D1%88%D0%B8%D0%BD%2C%20%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BE%D0%BA%20%D0%92%D0%9D%D0%98%D0%90%D0%9B%D0%9C%D0%98%2C%201" target="_blank">Открыть на карте</a></p>
 </section>
-
-</div>
 
 <footer>
   <p>Нижневолжская станция по селекции древесных пород — филиал ФНЦ агроэкологии РАН, г. Камышин.</p>
